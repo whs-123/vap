@@ -45,7 +45,7 @@ static const GLfloat kColorConversion709[] = {
 };
 
 // BT.601 full range-http://www.equasys.de/colorconversion.html
-const GLfloat kColorConversion601FullRange[] = {
+const GLfloat kColorConversion601FullRangeQG[] = {
     1.0,    1.0,    1.0,
     0.0,    -0.343, 1.765,
     1.4,    -0.711, 0.0,
@@ -338,7 +338,7 @@ NSString *const kFragmentShaderSource = SHADER_STRING
         }
         [self cleanupTextures];
 
-        _preferredConversion = kColorConversion601FullRange;
+        _preferredConversion = kColorConversion601FullRangeQG;
         
         //y
         glActiveTexture(GL_TEXTURE0);
